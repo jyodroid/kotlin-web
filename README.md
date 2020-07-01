@@ -1,6 +1,6 @@
 # kotlin-web
 
-[![forthebadge](https://github.com/jyodroid/kotlin-web/blob/master/images/1200px-Kotlin-logo.svg)](http://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-swift.svg)](https://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 [![Gem Version](https://badge.fury.io/rb/colorls.svg)](https://badge.fury.io/rb/colorls)
@@ -17,22 +17,11 @@ A Ruby script that colorizes the `ls` output with color and icons. Here are the 
 
 # Table of contents
 
+- [kotlin-web](#kotlin-web)
+- [Table of contents](#table-of-contents)
 - [Usage](#usage)
-  - [Flags](#flags)
-    - `-1`
-    - `-a`   (or) `--all`
-    - `-A`   (or) `--almost-all`
-    - `-d`   (or) `--dirs`
-    - `-f`   (or) `--files`
-    - `-h`   (or) `--help`
-    - `-l`   (or) `--long`
-    - `-r`   (or) `--report`
-    - `--tree` (or) `--tree=[DEPTH]`
-    - `--gs` (or) `--git-status`
-    - `--sd` (or) `--sort-dirs` or `--group-directories-first`
-    - `--sf` (or) `--sort-files`
-    - `-t`
-  - [Combination of flags](#combination-of-flags)
+    - [Flags](#flags)
+    - [Combination of flags](#combination-of-flags)
 - [Installation](#installation)
 - [Recommended configurations](#recommended-configurations)
 - [Custom configurations](#custom-configurations)
