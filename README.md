@@ -1,24 +1,27 @@
-# kotlin-web
+# Kotlin progresive web app
 
-[![Made With Kotlin](https://img.shields.io/badge/Made%20With-Kotlin-blue)](https://kotlinlang.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.72-Blue.svg)](https://kotlinlang.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Web App and PWA created using Kotlin
 
-A Ruby script that colorizes the `ls` output with color and icons. Here are the screenshots of working example on an iTerm2 terminal (Mac OS), `oh-my-zsh` with `powerlevel9k` theme and `powerline nerd-font + awesome-config` font with the `Solarized Dark` color theme.
+This repository is part of a learning excersise that includes working with Kotlin programming language in order to create a progresive web app
 
- ![image](https://user-images.githubusercontent.com/17109060/32149040-04f3125c-bd25-11e7-8003-66fd29bc18d4.png)
+You can find the slides of presentation of this proyect [here](https://docs.google.com/presentation/d/1i6Zesc97qfyi4hsc_30FbNOIq4PcyTD1IdHMwUYRv9k/edit?usp=sharing)
 
-*If you're interested in knowing the powerlevel9k configuration to get this prompt, have a look at [this gist](https://gist.github.com/athityakumar/1bd5e9e24cd2a1891565573a893993eb).*
+ <!-- ![image](https://user-images.githubusercontent.com/17109060/32149040-04f3125c-bd25-11e7-8003-66fd29bc18d4.png)
+
+*If you're interested in knowing the powerlevel9k configuration to get this prompt, have a look at [this gist](https://gist.github.com/athityakumar/1bd5e9e24cd2a1891565573a893993eb).* -->
 
 # Table of contents
 
 - [kotlin-web](#kotlin-web)
 - [Table of contents](#table-of-contents)
 - [Usage](#usage)
-    - [Flags](#flags)
-    - [Combination of flags](#combination-of-flags)
+    <!-- - [Flags](#flags)
+    - [Combination of flags](#combination-of-flags) -->
+- [Kotlin progresive web app](#kotlin-progresive-web-app)
+- [Table of contents](#table-of-contents)
+- [Usage](#usage)
 - [Installation](#installation)
 - [Recommended configurations](#recommended-configurations)
 - [Custom configurations](#custom-configurations)
@@ -31,7 +34,7 @@ A Ruby script that colorizes the `ls` output with color and icons. Here are the 
 
 [(Back to top)](#table-of-contents)
 
-Man pages have been added. Checkout `man colorls`.
+<!-- Man pages have been added. Checkout `man colorls`.
 
 ### Flags
 
@@ -87,9 +90,9 @@ Man pages have been added. Checkout `man colorls`.
 
 - With color options : `--light` or `--dark` can be passed as a flag, to choose the appropriate color scheme. By default, the dark color scheme is chosen. In order to tweak any color, read [Custom configurations](#custom-configurations).
 
-### Combination of flags
+### Combination of flags -->
 
-- Using `--gs` with `-t` :
+<!-- - Using `--gs` with `-t` :
 
   ![image](https://user-images.githubusercontent.com/17109060/32149076-8423c864-bd25-11e7-816e-8642643d2c27.png)
 
@@ -99,13 +102,13 @@ Man pages have been added. Checkout `man colorls`.
 
 - Using `--sd` with `-l` and `-A` :
 
-  ![image](https://user-images.githubusercontent.com/17109060/32149084-9eb2a416-bd25-11e7-8fb7-a9d336c6e038.png)
+  ![image](https://user-images.githubusercontent.com/17109060/32149084-9eb2a416-bd25-11e7-8fb7-a9d336c6e038.png) -->
 
 # Installation
 
 [(Back to top)](#table-of-contents)
 
-1. Install Ruby (preferably, version >= 2.5)
+<!-- 1. Install Ruby (preferably, version >= 2.5)
 2. Install the patched fonts of powerline nerd-font and/or font-awesome. Have a look at the [Nerd Font README](https://github.com/ryanoasis/nerd-fonts/blob/master/readme.md) for more installation instructions.
 
     *Note for `iTerm2` users - Please enable the Nerd Font at iTerm2 > Preferences > Profiles > Text > Non-ASCII font > Hack Regular Nerd Font Complete.*
@@ -126,13 +129,13 @@ Man pages have been added. Checkout `man colorls`.
 
 5. Start using `colorls` :tada:
 
-6. Have a look at [Recommended configurations](#recommended-configurations) and [Custom configurations](#custom-configurations).
+6. Have a look at [Recommended configurations](#recommended-configurations) and [Custom configurations](#custom-configurations). -->
 
 # Recommended configurations
 
 [(Back to top)](#table-of-contents)
 
-1. To add some short command (say, `lc`) with some flag options (say, `-l`, `-A`, `--sd`) by default, add this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.) :
+<!-- 1. To add some short command (say, `lc`) with some flag options (say, `-l`, `-A`, `--sd`) by default, add this to your shell configuration file (`~/.bashrc`, `~/.zshrc`, etc.) :
     ```sh
     alias lc='colorls -lA --sd'
     ```
@@ -141,13 +144,13 @@ Man pages have been added. Checkout `man colorls`.
 
     ```sh
     subl $(dirname $(gem which colorls))/yaml
-    ```
+    ``` -->
 
 # Custom configurations
 
 [(Back to top)](#table-of-contents)
 
-You can overwrite the existing icons and colors mapping by copying the yaml files from `$(dirname $(gem which colorls))/yaml` into `~/.config/colorls`, and changing them.
+<!-- You can overwrite the existing icons and colors mapping by copying the yaml files from `$(dirname $(gem which colorls))/yaml` into `~/.config/colorls`, and changing them.
 
 - To overwrite color mapping :
 
@@ -188,38 +191,37 @@ You can overwrite the existing icons and colors mapping by copying the yaml file
 
 - User contributed alias configurations :
 
-  - [@rjhilgefort](https://gist.github.com/rjhilgefort/51ea47dd91bcd90cd6d9b3b199188c16)
+  - [@rjhilgefort](https://gist.github.com/rjhilgefort/51ea47dd91bcd90cd6d9b3b199188c16) -->
 
 
 # Updating
 
 [(Back to top)](#table-of-contents)
 
-Want to update to the latest version of `colorls`?
+<!-- Want to update to the latest version of `colorls`?
 
 ```sh
 gem update colorls
-```
+``` -->
 
 # Uninstallation
 
 [(Back to top)](#table-of-contents)
 
-Want to uninstall and revert back to the old style? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
+<!-- Want to uninstall and revert back to the old style? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
 
 ```sh
 gem uninstall colorls
-```
+``` -->
 
 # Contributing
 
 [(Back to top)](#table-of-contents)
 
-Your contributions are always welcome! Please have a look at the [contribution guidelines](CONTRIBUTING.md) first. :tada:
+Your contributions are always welcome! :robot: Please have a look at the [contribution guidelines](CONTRIBUTING.md) first.
 
 # License
 
 [(Back to top)](#table-of-contents)
 
-
-The MIT License (MIT) 2017 - [Athitya Kumar](https://github.com/athityakumar/). Please have a look at the [LICENSE.md](LICENSE.md) for more details.
+The MIT License (MIT) 2020 - [John Tangarife](https://github.com/jyodroid/). Please have a look at the [LICENSE](LICENSE) for more details.
