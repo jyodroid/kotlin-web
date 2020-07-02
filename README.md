@@ -30,6 +30,11 @@ You can find the slides of presentation of this proyect [here](https://docs.goog
 - [Contributing](#contributing)
 - [License](#license)
 
+# Project configuration
+Create a new gradle project in IntelliJ with the following configuration
+
+![image](images/project-creation.png)
+
 # Usage
 
 [(Back to top)](#table-of-contents)
