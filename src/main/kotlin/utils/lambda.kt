@@ -1,7 +1,7 @@
 package utils
 
 import components.SongList
-import model.SongListProps
+import components.SongListProps
 import react.RBuilder
 import react.ReactElement
 

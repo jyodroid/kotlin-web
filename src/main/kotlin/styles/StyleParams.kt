@@ -1,4 +1,4 @@
-package style
+package styles
 
 import kotlinx.css.Color
 

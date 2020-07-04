@@ -1,4 +1,3 @@
-import components.SongList
 import kotlinx.css.Display
 import kotlinx.css.GridTemplateColumns
 import kotlinx.css.backgroundColor
@@ -13,7 +12,7 @@ import react.RState
 import react.dom.h1
 import react.dom.h3
 import react.dom.img
-import style.PSColors
+import styles.PSColors
 import styled.css
 import styled.styledDiv
 import utils.songList
@@ -27,9 +26,20 @@ val unwatchedVideos = listOf(
 val watchedVideos = listOf(
     Song(4, "Allegro maestoso", "Alexandru Sura", "https://youtu.be/PsaFVLr8t4E")
 )
-
 class App : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
+        styledDiv {
+            css {
+                backgroundColor = PSColors.prussianBlue
+            }
+
+            img {
+                attrs {
+                    alt = "Paganini"
+                    src = "./images/paganini.jpg"
+                }
+            }
+        }
         styledDiv {
             css {
                 display = Display.grid

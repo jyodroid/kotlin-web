@@ -1,6 +1,6 @@
 # Kotlin progresive web app
 
-[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.72-Blue.svg)](https://kotlinlang.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-1.3.72-Blue.svg)](https://kotlinlang.org/) [![React Version](https://img.shields.io/badge/React-16.13.1-brightgreen)](https://reactjs.org/) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Web App and PWA created using Kotlin
 
@@ -220,7 +220,7 @@ gem update colorls
 
 [(Back to top)](#table-of-contents)
 
-<!-- Want to uninstall and revert back to the old style? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
+<!-- Want to uninstall and revert back to the old styles? No issues (sob). Please feel free to open an issue regarding how we can enhance `colorls`.
 
 ```sh
 gem uninstall colorls
