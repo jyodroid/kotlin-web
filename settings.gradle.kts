@@ -1,2 +1,2 @@
-rootProject.name = "konfexplorer"
+rootProject.name = "paganinisounds"
 
