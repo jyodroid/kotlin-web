@@ -32,8 +32,15 @@ You can find the slides of presentation of this proyect [here](https://docs.goog
 
 # Project configuration
 Create a new gradle project in IntelliJ with the following configuration
-
 ![image](images/project-creation.png)
+
+# Run development server
+you can either run task named `browserDevelopmentRun` under other tasks or run `./gradlew run` on terminal
+
+In order to configure continuous compiling development on IDE you can edit run configuration
+![image](images/run-configuration.png)
+
+or you can run `./gradlew run --continuous` on Terminal
 
 # Usage
 
