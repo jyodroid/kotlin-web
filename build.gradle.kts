@@ -22,14 +22,14 @@ dependencies {
 
     //Kotlin Styled
     implementation("org.jetbrains:kotlin-styled:1.0.0-pre.109-kotlin-1.3.72")
-    implementation(npm("styled-components"))
+    implementation(npm("styled-components", "5.1.1"))
     implementation(npm("inline-style-prefixer"))
 
     //Video Player
-    implementation(npm("react-player"))
+    implementation(npm("react-player", "2.5.0"))
 
     //Share Buttons
-    implementation(npm("react-share"))
+    implementation(npm("react-share", "4.2.0"))
 
     //Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-common:1.3.5")

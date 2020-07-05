@@ -10,15 +10,17 @@ import react.RState
 import react.dom.p
 import react.setState
 
-class SongList : RComponent<SongListProps, SongListState>() {
+class SongList : RComponent<SongListProps, RState>() {
     override fun RBuilder.render() {
         for (song in props.songs) {
             p {
                 key = song.id.toString()
                 attrs {
-                    onClickFunction = onSongSelectedListener(song)
+                    onClickFunction = {
+                        props.onSelectSong(song)
+                    }
                 }
-                if (song == state.selectedSong) {
+                if (song == props.selectedSong) {
                     +"▶ "
                 }
 
@@ -26,18 +28,10 @@ class SongList : RComponent<SongListProps, SongListState>() {
             }
         }
     }
-
-    private fun onSongSelectedListener(song: Song): (event: Event) -> Unit = {
-        setState {
-            selectedSong = song
-        }
-    }
 }
 
 external interface SongListProps: RProps {
     var songs: List<Song>
-}
-
-external interface SongListState: RState {
     var selectedSong: Song?
+    var onSelectSong: (Song) -> Unit
 }
