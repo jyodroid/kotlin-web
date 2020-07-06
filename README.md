@@ -59,10 +59,12 @@ ngrok http 8081
  -[ ] Styles
  -[ ] Webpack
  -[ ] Wrappers
+ -[ ] Hooks
  -[ ] Debug
 + Try these tools
  -[ ] [Ktor](https://ktor.io/quickstart/index.html): framework to build connected applications 
 + How to Test?
++ Deploy to production [Heroku?](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/09_Deploying_to_Production)
 
 # Contributing
 
