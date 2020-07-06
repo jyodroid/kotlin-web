@@ -1,4 +1,10 @@
+import api.SongRepository
 import components.VideoPlayerProps
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.css.Color
 import kotlinx.css.Display
 import kotlinx.css.FlexWrap
@@ -28,16 +34,25 @@ import utils.videoPlayer
 
 class App : RComponent<RProps, AppState>() {
 
-    override fun AppState.init() {
-        unwatchedVideos = listOf(
-            Song(1, "Caprice 24", "Alexandrox Xandrox", "https://www.youtube.com/watch?v=CjDz-r65xUU"),
-            Song(2, "Caprice 5", "Sumina Studer", "https://www.youtube.com/watch?v=0jXXWBt5URw"),
-            Song(3, "La Campanella", "Stefan Milenkovich", "https://www.youtube.com/watch?v=230RgLax-_o")
-        )
+    private val songRepository = SongRepository()
 
-        watchedVideos = listOf(
-            Song(4, "Allegro maestoso", "Stepan Grytsay", "https://www.youtube.com/watch?v=L1JeOD0xvuc")
-        )
+    override fun AppState.init() {
+        unwatchedVideos = emptyList()
+        watchedVideos = emptyList()
+
+        MainScope().launch {
+            fetchSongs(Song.Type.UNWATCHED).let {
+                setState {
+                    unwatchedVideos = it
+                }
+            }
+
+            fetchSongs(Song.Type.WATCHED).let {
+                setState {
+                    watchedVideos = it
+                }
+            }
+        }
     }
 
     override fun RBuilder.render() {
@@ -103,7 +118,7 @@ class App : RComponent<RProps, AppState>() {
     }
 
     private fun VideoPlayerProps.onWatchedButtonPressedListener(): (Song) -> Unit {
-        return {song ->
+        return { song ->
             if (song in state.unwatchedVideos) {
                 setState {
                     unwatchedVideos -= song
@@ -115,6 +130,12 @@ class App : RComponent<RProps, AppState>() {
                     watchedVideos -= song
                 }
             }
+        }
+    }
+
+    private suspend fun fetchSongs(type: Song.Type): List<Song> = coroutineScope {
+        withContext(Dispatchers.Default) {
+            songRepository.getSongs(type)
         }
     }
 

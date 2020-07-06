@@ -17,6 +17,7 @@ You can find the slides of presentation of this proyect [here](https://docs.goog
 - [kotlin-web](#kotlin-web)
 - [Project configuration](#project-configuration)
 - [Run development server](#run-development-server)
+- [Run API development server](#run-api-development-server)
 - [TODO](#TODO)
 - [Contributing](#contributing)
 - [License](#license)
@@ -36,6 +37,22 @@ In order to configure continuous compiling development on IDE you can edit run c
 ![image](images/run-configuration.png)
 
 or you can run `./gradlew run --continuous` on Terminal
+
+# Run API development server
+[(Back to top)](#table-of-contents)
+
+In order to provide a basic development API, the project use [Spring Boot](https://spring.io/projects/spring-boot)
+
+to start spring boot server:
+1. Go to module paganinisoundsApi
+2. run on terminal ` ./gradlew bootRun` 
+
+you can also run from module application `paganinisoundsApi/src/main/kotlin/com/jyodroid/paganinisounds/PaganinisoundsApiApplication.kt` by running the main method
+
+The servers run on ***localhost:8081*** so if you like use [ngrok](https://ngrok.com/) 
+```
+ngrok http 8081
+``` 
 
 # TODO
 + Play around
