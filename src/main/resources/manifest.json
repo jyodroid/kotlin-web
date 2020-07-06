@@ -43,5 +43,5 @@
   "display": "standalone",
   "background_color": "#1d3557ff",
   "theme_color": "#a8dadcff",
-  "orientation": "landscape"
+  "orientation": "portrait"
 }

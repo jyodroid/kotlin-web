@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paganini songs</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#A8DADCFF">
+</head>
+<body>
+<h1>Paganini Sounds</h1>
+<img src="./images/paganini.png">
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((reg) => {
+                    console.log('Service worker registered.', reg);
+                });
+        });
+    }
+</script>
+</body>
+</html>

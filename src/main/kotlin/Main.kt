@@ -5,7 +5,7 @@ import kotlin.browser.window
 fun main() {
     window.addEventListener("load", {
         window.navigator.serviceWorker
-            .register("./serviceworker/service-worker")
+            .register("/service-worker.js")
             .then { console.log("service worker registered") }
             .catch { console.error("Service worker registration failed $it") }
     })
