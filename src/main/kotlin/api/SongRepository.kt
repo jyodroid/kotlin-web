@@ -1,7 +1,9 @@
 package api
 
+import kotlinext.js.asJsObject
 import kotlinx.coroutines.await
 import model.Song
+import org.w3c.fetch.Response
 import kotlin.browser.window
 
 class SongRepository {
@@ -30,12 +32,37 @@ class SongRepository {
 //    }
 
     // compacted version
-    suspend fun getSongs(type: Song.Type) =
+    private suspend fun fetchSongsOnAPI(url: String) =
         window
-            .fetch("$endpoint?type=$type")
+            .fetch(url)
             .await()
             .json()
             .await()
             .unsafeCast<Array<Song>>()
             .toList()
+
+
+    suspend fun getSongs(type: Song.Type): List<Song> {
+        val url = "$endpoint?type=$type"
+        return try {
+            window
+                .caches
+                .match(url)
+                .await()
+                .let {
+                    if (it is Response && it.ok){
+                        it.json()
+                            .await()
+                    }else{
+                        console.error("it is not ok response", it)
+                        return fetchSongsOnAPI(url)
+                    }
+                }
+                .unsafeCast<Array<Song>>()
+                .asList()
+        }catch (error: Error){
+            console.error("error getting fetch", error)
+            return fetchSongsOnAPI(url)
+        }
+    }
 }
