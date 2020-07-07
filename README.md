@@ -69,7 +69,7 @@ ngrok http 8080 -host-header="localhost:8080"
  -[ ] [workbox](https://developers.google.com/web/tools/workbox): JS library to support offline applications
 + How to Test?
 + Deploy to production [Heroku?](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/09_Deploying_to_Production)
-or [netlify](https://www.netlify.com/)?
+or [netlify](https://www.netlify.com/)? [heroku devcenter](https://devcenter.heroku.com/articles/getting-started-with-kotlin) and [heroku from Jkutner](https://github.com/heroku/kotlin-getting-started)
 
 # Contributing
 
