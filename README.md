@@ -50,10 +50,13 @@ to start spring boot server:
 you can also run from module application `paganinisoundsApi/src/main/kotlin/com/jyodroid/paganinisounds/PaganinisoundsApiApplication.kt` by running the main method
 
 The servers run on ***localhost:8081*** so if you like use [ngrok](https://ngrok.com/) 
-```
-ngrok http 8081
+```bash
+ngrok http --host-header=rewrite 8080
 ``` 
-
+or
+```bash
+ngrok http 8080 -host-header="localhost:8080"
+```
 # TODO
 + Play around
  -[ ] Styles
@@ -63,8 +66,10 @@ ngrok http 8081
  -[ ] Debug
 + Try these tools
  -[ ] [Ktor](https://ktor.io/quickstart/index.html): framework to build connected applications 
+ -[ ] [workbox](https://developers.google.com/web/tools/workbox): JS library to support offline applications
 + How to Test?
 + Deploy to production [Heroku?](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/09_Deploying_to_Production)
+or [netlify](https://www.netlify.com/)?
 
 # Contributing
 

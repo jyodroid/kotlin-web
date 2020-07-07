@@ -19,7 +19,7 @@ class SongsController {
         Song(4, "Allegro maestoso", "Stepan Grytsay", "https://www.youtube.com/watch?v=L1JeOD0xvuc")
     )
 
-    @CrossOrigin("http://localhost:8080")
+    @CrossOrigin(value = ["http://localhost:8080"])
     @GetMapping("/songs")
     fun getSong(@RequestParam(value = "type", defaultValue = "watched") type: String): List<Song> {
         if (type == "unwatched") {
